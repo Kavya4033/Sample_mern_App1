@@ -3,20 +3,16 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 let { users } = require('../models/users');
 
-// 💡 1. FIX: Removed the duplicate, empty "/register" route that was blocking your database logic.
 // localhost:3000/api/emp/register
 router.post("/register", async (req, res) => {
     try {
         console.log(req.body);
 
-        // Hash the incoming password
         req.body.password = await bcrypt.hash(req.body.password, 10);
 
-        // Create and save the new user to MongoDB
-        let newuser = new users(req.body); // Added 'new' keyword just in case it's a Mongoose model
+        let newuser = new users(req.body); 
         let result = await newuser.save();
 
-        // Hide password hash before sending the user object back to Postman
         result.password = undefined;
 
         res.status(201).send(result);
@@ -32,8 +28,6 @@ router.post("/login", async (req, res) => {
         const result = await users.findOne({ email: req.body.email });
 
         if (result) {
-            // 💡 2. FIX: You were setting result.password to undefined BEFORE passing it to bcrypt.compare().
-            // This would cause password comparisons to always fail.
             let matchpass = await bcrypt.compare(req.body.password, result.password);
 
             if (matchpass) {
