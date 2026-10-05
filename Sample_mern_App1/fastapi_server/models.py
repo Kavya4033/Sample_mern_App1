@@ -9,4 +9,4 @@ class Student(BaseModel):
 class Staff(BaseModel):
     name: str
     email: EmailStr
-    role: str
+    designation: str
