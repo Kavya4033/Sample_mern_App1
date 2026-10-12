@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import Header from './components/header'
-import Footer from './components/footer'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import home from './pages/home'
-import about from './pages/about'
-import contact from './pages/contact'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Services from './pages/Services'
 import { Routes, Route } from 'react-router-dom'
 function App() {
 
@@ -13,9 +14,9 @@ function App() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<home></home>}></Route>
-        <Route path="/about" element={<about></about>}></Route>
-        <Route path="/contact" element={<contact></contact>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/About" element={<About></About>}></Route>
+        <Route path="/Contact" element={<Contact></Contact>}></Route>
 
       </Routes>
       <Footer />
