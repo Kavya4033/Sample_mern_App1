@@ -1,16 +1,21 @@
 import { useState } from "react"
-
+import { useNavigate } from "react-router-dom"
 function AdminLogin() {
 
     let [Username, setUsername] = useState("")
     let [Password, SetPassword] = useState("")
+    let [error,seterror]=useState("")
+    let navigate =useNavigate()
+    
     let login=(Event)=>{
         Event.preventDefault()
         if(Username=="admin" && Password=="admin"){
             console.log("Login Success")
+            navigate("/AdminHome")
         }
         else{
             console.log("Login Failed")
+            seterror("Invalid Credentials")
         }
     }
     return (
@@ -21,6 +26,7 @@ function AdminLogin() {
                 <button type="submit">Admin Login</button>
 
             </form>
+            {error && <div className="alert alert-danger">{error}</div>}
         </div>
     )
 }
