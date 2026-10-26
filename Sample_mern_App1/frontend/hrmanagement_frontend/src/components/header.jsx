@@ -7,6 +7,7 @@ function header() {
             <Link to="/About">About</Link>
             <Link to="/Contact">Contact</Link>
             <Link to="/AdminLogin">Admin Login</Link>
+            <Link to="/Register">Register</Link>
 
         </div>
     )

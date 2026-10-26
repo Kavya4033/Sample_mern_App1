@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 let mongoose = require('mongoose');
+const hrroutes = require("./routes/hr_route");
+const emproutes = require("./routes/emp_route");
+let cors=require('cors');
+app.use(cors())
 
 mongoose.connect("mongodb://127.0.0.1:27017/hrmanagement")
 .then(() => {
@@ -13,8 +17,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/hrmanagement")
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 
-const hrroutes = require("./routes/hr_route");
-const emproutes = require("./routes/emp_route");
 
 app.use("/api/hr", hrroutes);
 app.use("/api/emp", emproutes);

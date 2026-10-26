@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import AdminLogin from './pages/AdminLogin';
 import AdminHome from './pages/AdminHome';
 import { Routes, Route } from 'react-router-dom';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -17,10 +18,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/Register" element={<Register></Register>}></Route>
         <Route path="/About" element={<About></About>}></Route>
         <Route path="/Contact" element={<Contact></Contact>}></Route>
         <Route path="/AdminLogin" element={<AdminLogin></AdminLogin>}></Route>
         <Route path="/AdminHome" element={<AdminHome></AdminHome>}></Route>
+
       </Routes>
       <Footer />
     </div>
