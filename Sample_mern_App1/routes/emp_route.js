@@ -10,7 +10,7 @@ router.post("/register", async (req, res) => {
 
         req.body.password = await bcrypt.hash(req.body.password, 10);
 
-        let newuser = new users(req.body); 
+        let newuser = new users(req.body);
         let result = await newuser.save();
 
         result.password = undefined;
@@ -32,12 +32,16 @@ router.post("/login", async (req, res) => {
 
             if (matchpass) {
                 result.password = undefined; // Clear password hash only AFTER comparison
-                res.send({ message: "Login successful", user: result });
+                res.send({
+                    "msg": "Login Success",
+                    "user": { _id: result._id, name: result.name, email: result.email, role: result.role }
+                });
+
             } else {
-                res.status(401).send("Invalid password");
+                res.send({ "msg": "Login Failed" });
             }
         } else {
-            res.status(404).send("User not found");
+            res.send({ "msg": "User not Found" });
         }
     } catch (err) {
         res.status(500).send({ error: "Login error", details: err.message });
@@ -51,12 +55,12 @@ router.get("/viewtask", (req, res) => {
 router.put("/updatestatus", (req, res) => {
     res.send("Update status page called");
 });
-router.patch("/updateprofile/:id",async(req,res)=>{
-    let data=req.body;
-    if(data.password){
-        data.password=await bcrypt.hash(data.password,10);
+router.patch("/updateprofile/:id", async (req, res) => {
+    let data = req.body;
+    if (data.password) {
+        data.password = await bcrypt.hash(data.password, 10);
     }
-    let result = await users.findByIdAndUpdate(req.params.id,data,{new:true});
+    let result = await users.findByIdAndUpdate(req.params.id, data, { new: true });
     res.send(result);
 })
 module.exports = router;
