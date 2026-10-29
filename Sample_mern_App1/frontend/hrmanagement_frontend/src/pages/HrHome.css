@@ -1,0 +1,165 @@
+
+.hr-dashboard {
+    min-height: 85vh;
+    background: #f1f5f9;
+    font-family: Arial, sans-serif;
+}
+
+.hr-welcome {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.15);
+}
+
+.hr-tag {
+    color: #00d4ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hr-welcome h1 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.hr-welcome p {
+    color: #cbd5e1;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.hr-avatar {
+    min-width: 85px;
+    height: 85px;
+    border-radius: 22px;
+    background: #00d4ff;
+    color: #141e30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.hr-card {
+    height: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hr-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+
+.hr-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: #e0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.hr-card h4 {
+    font-size: 21px;
+    font-weight: bold;
+    color: #141e30;
+    margin-bottom: 12px;
+}
+
+.hr-card p {
+    color: #64748b;
+    line-height: 1.7;
+    min-height: 50px;
+}
+
+.hr-card-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hr-card-link:hover {
+    color: #0891b2;
+}
+
+.hr-bottom {
+    background: white;
+    margin-top: 35px;
+    padding: 25px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border: 1px solid #e2e8f0;
+}
+
+.hr-bottom h3 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hr-bottom p {
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.hr-logout {
+    background: #ef4444;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.hr-logout:hover {
+    background: #b91c1c;
+    color: white;
+}
+
+@media (max-width: 576px) {
+    .hr-welcome {
+        padding: 25px 20px;
+    }
+
+    .hr-avatar {
+        min-width: 55px;
+        height: 55px;
+        font-size: 20px;
+        border-radius: 15px;
+    }
+
+    .hr-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 22px;
+    }
+
+    .hr-logout {
+        width: 100%;
+    }
+
+    .hr-card {
+        padding: 25px;
+    }
+}

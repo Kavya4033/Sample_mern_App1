@@ -1,0 +1,123 @@
+
+.admin-dashboard {
+    min-height: 100vh;
+    background: #f4f7fb;
+    padding-bottom: 50px;
+}
+
+.admin-welcome {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 0 0 25px 25px;
+}
+
+.admin-welcome h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.admin-welcome p {
+    font-size: 17px;
+    color: #dce6f1;
+    margin-bottom: 25px;
+}
+
+.admin-logout {
+    background: #00d4ff;
+    color: #141e30;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-logout:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.admin-content {
+    padding-top: 45px;
+}
+
+.admin-content h2 {
+    color: #141e30;
+    font-weight: bold;
+    text-align: center;
+}
+
+.admin-subtitle {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 35px;
+}
+
+.admin-card {
+    height: 100%;
+    min-height: 260px;
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(20, 30, 48, 0.08);
+    transition: 0.3s;
+}
+
+.admin-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(20, 30, 48, 0.15);
+}
+
+.admin-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.admin-card h3 {
+    color: #243b55;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.admin-card p {
+    color: #6c757d;
+    min-height: 45px;
+    line-height: 1.6;
+}
+
+.admin-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #243b55;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.admin-btn:hover {
+    background: #00bde3;
+    color: #141e30;
+}
+
+@media (max-width: 576px) {
+    .admin-welcome {
+        padding: 40px 15px;
+    }
+
+    .admin-welcome h1 {
+        font-size: 27px;
+    }
+
+    .admin-content {
+        padding-top: 30px;
+    }
+}

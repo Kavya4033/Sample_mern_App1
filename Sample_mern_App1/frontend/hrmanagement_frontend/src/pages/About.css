@@ -1,0 +1,162 @@
+
+.about-page {
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+}
+
+.about-hero {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    padding: 75px 20px;
+    color: white;
+}
+
+.about-tag {
+    color: #00d4ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.about-hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.about-hero h1 span {
+    color: #00d4ff;
+}
+
+.about-hero p {
+    max-width: 600px;
+    margin: auto;
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-content {
+    padding: 70px 0;
+    background: #f8fafc;
+}
+
+.about-image {
+    min-height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #243b55, #141e30);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+.about-symbol {
+    width: 90px;
+    height: 90px;
+    border-radius: 25px;
+    background: #00d4ff;
+    color: #141e30;
+    font-size: 55px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-image h3 {
+    font-weight: bold;
+}
+
+.about-image p {
+    color: #cbd5e1;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.about-btn {
+    background: #00bfe8;
+    color: #141e30;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #141e30;
+    color: white;
+}
+
+.about-features {
+    margin-top: 65px;
+}
+
+.about-card {
+    height: 100%;
+    padding: 30px 25px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.12);
+}
+
+.about-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.about-card h4 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        padding: 55px 15px;
+    }
+
+    .about-content {
+        padding: 45px 0;
+    }
+
+    .about-content h2 {
+        font-size: 27px;
+    }
+
+    .about-image {
+        min-height: 250px;
+    }
+
+    .about-features {
+        margin-top: 40px;
+    }
+}
